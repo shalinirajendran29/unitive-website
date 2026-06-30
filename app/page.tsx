@@ -1,8 +1,11 @@
 
 "use client";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Pagination, Autoplay, Navigation} from "swiper/modules";
+import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/navigation";
 export default function Home() {
@@ -20,49 +23,109 @@ export default function Home() {
   ];
   return (
     <>
-    
-    <section className="flex items-center justify-between min-h-[85vh] px-24 gap-20">
+    <Navbar />
+   <section className="min-h-[85vh] px-24">
 
-      {/* Left Section */}
-      <div className="w-[45%]">
-        <p className="inline-block border border-orange-500 text-orange-500 px-4 py-2 rounded-full text-sm mb-6">
-          DIGITAL TRANSFORMATION LEADERS
-        </p>
+  <Swiper
+    modules={[Pagination, Autoplay]}
+    pagination={{ clickable: true }}
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    loop={true}
+    className="heroSwiper"
+  >
 
-        <h1 className="text-4xl font-bold leading-tight mb-6">
-          TRANSFORM IDEAS  INTO <br />
-         DIGITAL <span className="text-orange-500">SOLUTIONS</span>
-        </h1>
+    {/* Slide 1 - DIGITAL (உங்க existing content) */}
+    <SwiperSlide>
+      <div className="flex items-center justify-between min-h-[85vh] gap-20">
 
-        <p className="text-gray-600 mb-8 max-w-xl">
-          At Unitive, we deliver smart software solutions that empower businesses to 
-          innovate, grow, and succeed. Our scalable technologies are designed to create 
-          lasting impact and long-term value.
-        </p>
+        <div className="w-[45%]">
+          <p className="inline-block border border-orange-500 text-orange-500 px-4 py-2 rounded-full text-sm mb-6">
+            DIGITAL TRANSFORMATION LEADERS
+          </p>
 
-        <div className="flex gap-4">
-          <button className="bg-orange-500 text-white px-6 py-3 rounded-lg">
-            Explore Our Solutions
-          </button>
+          <h1 className="text-4xl font-bold leading-tight mb-6">
+            TRANSFORM IDEAS INTO <br />
+            DIGITAL <span className="text-orange-500">SOLUTIONS</span>
+          </h1>
 
-          <button className="border px-6 py-3 rounded-lg">
-            Talk To Us
-          </button>
+          <p className="text-gray-600 mb-8 max-w-xl">
+          At Unitive, we deliver smart software solutions that empower businesses to innovate, grow, and succeed. 
+          Our scalable technologies are designed to create lasting impact and long-term value.
+          </p>
+
+          <div className="flex gap-4">
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-lg">
+              Explore Our Solutions
+            </button>
+
+            <button className="border px-6 py-3 rounded-lg">
+              Talk To Us
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* Right Section */}
-      <div className="w-[55%] flex justify-center">
-        <Image
-          src="/images/heroimage.png"
-          alt="Hero"
-          width ={500}
-          height ={500}
-          className="w-[650px] h-auto"
-        />
-      </div>
+        <div className="w-[55%] flex justify-center">
+          <Image
+            src="/images/heroimage.png"
+            alt="Hero"
+            width={500}
+            height={500}
+            className="w-[650px] h-auto"
+          />
+        </div>
 
-    </section>
+      </div>
+    </SwiperSlide>
+
+    {/* Slide 2 - ENGINEERING (NEW ADD) */}
+    <SwiperSlide>
+      <div className="flex items-center justify-between min-h-[85vh] gap-20">
+
+        <div className="w-[45%]">
+          <p className="inline-block border border-orange-500 text-orange-500 px-4 py-2 rounded-full text-sm mb-6">
+         ENGINEERING EXCELLENCE
+          </p>
+
+          <h1 className="text-4xl font-bold leading-tight mb-6">
+          ENGINEERING EXCELLENCE THROUGH 
+            <span className="text-orange-500"> INNOVATION</span> 
+          </h1>
+
+          <p className="text-gray-600 mb-8 max-w-xl">
+           At Unitive, we provide advanced engineering solutions that drive innovation, efficiency, and product excellence. 
+           We help organizations accelerate development and bring high-quality products to market
+          </p>
+
+          <div className="flex gap-4">
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-lg">
+               Explore Our Solutions
+            </button>
+
+            <button className="border px-6 py-3 rounded-lg">
+              Contact Us
+            </button>
+          </div>
+        </div>
+
+        <div className="w-[55%] flex justify-center">
+          <Image
+            src="/images/banner2.png"
+            alt="Engineering"
+            width={500}
+            height={500}
+            className="w-[650px] h-auto"
+          />
+        </div>
+
+      </div>
+    </SwiperSlide>
+
+  </Swiper>
+
+</section>
     {/* section 2 */}
        <section className="py-20 px-24">
 
@@ -79,7 +142,12 @@ export default function Home() {
         {/* Cards */}
         <div className="grid grid-cols-3 gap-10">
 
-          <div className="border border-orange-100 rounded-3xl p-8">
+         <div className="border border-orange-100 rounded-3xl p-8
+                transition-all duration-300
+                hover:shadow-xl
+                hover:-translate-y-3
+                hover:border-orange-500
+                hover:bg-orange-50">
             <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/images/digital.png"
@@ -97,8 +165,12 @@ export default function Home() {
             </p>
             <button className="text-orange-500 font-medium">Learn More →</button>
           </div>
-
-          <div className="border border-orange-100 rounded-3xl p-8">
+<div className="border border-orange-100 rounded-3xl p-8
+                transition-all duration-300
+                hover:shadow-xl
+                hover:-translate-y-3
+                hover:border-orange-500
+                hover:bg-orange-50">
              <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/images/engineering.png"
@@ -116,7 +188,12 @@ export default function Home() {
             <button className="text-orange-500 font-medium">Learn More →</button>
           </div>
 
-          <div className="border border-orange-200 rounded-3xl p-8">
+         <div className="border border-orange-100 rounded-3xl p-8
+                transition-all duration-300
+                hover:shadow-xl
+                hover:-translate-y-3
+                hover:border-orange-500
+                hover:bg-orange-50">
              <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/images/cae.png"
@@ -469,6 +546,7 @@ export default function Home() {
     </button>
   </div>
 </section>
+<Footer />
 
 
     </>

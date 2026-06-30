@@ -25,3 +25,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.heroSwiper .swiper-pagination {
+  bottom: 30px !important;
+}
+
+.heroSwiper .swiper-pagination-bullet {
+  width: 80px !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+  background: #d9d9d9 !important;
+  opacity: 1 !important;
+  margin: 0 6px !important;
+}
+
+.heroSwiper .swiper-pagination-bullet-active {
+  background: #FE5800 !important;
+}

@@ -1,13 +1,30 @@
+"use client";
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 
 export default function About() {
+   const logos = [
+    "/images/lt.png",
+    "/images/autosys.png",
+    "/images/blackveatch.png",
+    "/images/nadi.png",
+    "/images/rev.png",
+    "/images/celeros.png",
+    "/images/suzuki.jpg",
+    "/images/birlasoft.png",
+    "/images/honeywell.png",
+    "/images/pollrich.jpg",
+  ];
   return (
     <>
+    <Navbar />
       {/* Banner */}
       <section
         className="relative h-[280px] flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/banner2.png')",
+          backgroundImage: "url('/images/aboutbanner.png')",
         }}
       >
         <div className="absolute inset-0 bg-[#7d1d1d]/70"></div>
@@ -62,41 +79,169 @@ export default function About() {
           </div>
         </div>
       </section>
+      
+      {/* Vision & Mission Section */}
+<section className="relative py-20 bg-white overflow-hidden">
 
-     <div className="group bg-white border border-[#E8E8E8] rounded-[20px] p-8 transition-all duration-500 hover:bg-gradient-to-r hover:from-[#F46A2A] hover:to-[#D94A16] hover:shadow-xl">
+  {/* Top Right Pattern */}
+  <div className="absolute top-10 right-0 opacity-20">
+    <Image
+      src="/images/rightpattern.png"
+      alt="pattern"
+      width={180}
+      height={180}
+    />
+  </div>
 
-  {/* Icon + Title */}
-  <div className="flex items-center gap-4 mb-6">
+  {/* Bottom Left Pattern */}
+  <div className="absolute bottom-8 left-8 opacity-20">
+    <Image
+      src="/images/vector 4.png"
+      alt="pattern"
+      width={180}
+      height={180}
+    
+    />
+  </div>
 
-    <div className="relative w-14 h-14">
-      {/* Normal Icon */}
-      <Image
-        src="/images/ourvision.png"
-        alt="Vision"
-        fill
-        className="object-contain transition-opacity duration-300 group-hover:opacity-0"
-      />
+  <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
 
-      {/* Hover Icon */}
-      <Image
-        src="/images/ourvision-hover.png"
-        alt="Vision"
-        fill
-        className="object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-      />
+    {/* Heading */}
+    <div className="text-center mb-14">
+      <h2 className="text-4xl md:text-5xl font-bold text-[#E97A4D]">
+        OUR VISION & MISSION
+      </h2>
+
+      <p className="mt-4 text-gray-500 text-lg">
+        We bridge the gap between creative digital experiences and robust technical engineering.
+      </p>
     </div>
 
-    <h3 className="text-[36px] font-bold text-[#E84E1B] group-hover:text-white transition-all duration-300">
-      Our Vision
-    </h3>
+    {/* Cards */}
+    <div className="grid md:grid-cols-2 gap-10">
+
+      {/* Mission */}
+      <div className="group border border-gray-200 rounded-[30px] p-8 transition-all duration-500 hover:bg-[#EA7747] hover:shadow-xl">
+
+        <div className="flex items-center gap-5 mb-6">
+
+          <Image
+            src="/images/ourvision.png"
+            alt="mission"
+            width={70}
+            height={70}
+            className="block group-hover:hidden"
+          />
+
+          <Image
+            src="/images/hoverimage.svg"
+            alt="mission"
+            width={70}
+            height={70}
+            className="hidden group-hover:block"
+          />
+
+          <h3 className="text-4xl font-semibold text-[#E97A4D] group-hover:text-white">
+            Our Mission
+          </h3>
+
+        </div>
+
+        <p className="text-gray-700 leading-8 group-hover:text-white">
+          We at unitive technologies, started to solve challenging problems from 2017 in software development 
+          using future technologies such as Machine  Learning, Deep Learning, Computer Vision, Data Science etc., 
+          that impress as well as provides best and accurate solution. 
+          We extended our domain of expertise in Embedded and Mechanical too. 
+        </p>
+
+      </div>
+
+      {/* Vision */}
+      <div className="group border border-gray-200 rounded-[30px] p-8 transition-all duration-500 hover:bg-[#EA7747] hover:shadow-xl">
+
+        <div className="flex items-center gap-5 mb-6">
+
+          <Image
+            src="/images/ourvision.png"
+            alt="vision"
+            width={70}
+            height={70}
+            className="block group-hover:hidden"
+          />
+
+          <Image
+            src="/images/hoverimage.svg"
+            alt="vision"
+            width={70}
+            height={70}
+            className="hidden group-hover:block"
+          />
+
+          <h3 className="text-4xl font-semibold text-[#E97A4D] group-hover:text-white">
+            Our Vision
+          </h3>
+
+        </div>
+
+        <p className="text-gray-700 leading-8 group-hover:text-white">
+         “Our main aim is to develop in a constant manner and become a leading performer in this
+          competitive global marketplace. Fortunately, we have been able to gather a crew of professionals that can shape and mold their collective experiences,
+          all of them posses outstanding talent that can help to accelerate your organization”
+        </p>
+
+      </div>
+
+    </div>
 
   </div>
 
-  <p className="text-[20px] leading-10 text-[#555] group-hover:text-white transition-all duration-300">
-    We strive to become a trusted technology partner by delivering innovative engineering and digital transformation solutions that empower businesses to achieve sustainable growth.
-  </p>
+</section>
+{/* Trusted By Industry Leaders */}
+<section className="py-24 px-24 bg-white">
 
-</div>
+  {/* Heading */}
+  <div className="text-center mb-16">
+    <h2 className="text-5xl font-bold">
+      <span className="text-[#FE5800]">Trusted By</span>{" "}
+      <span className="text-[#000000]">Industry Leaders</span>
+    </h2>
+
+    <p className="text-gray-500 text-xl mt-4 leading-9">
+      Delivering reliable engineering solutions for OEMs and Tier-1 suppliers
+      across global industries
+    </p>
+  </div>
+
+  {/* Logo Grid */}
+  <div className="grid grid-cols-5 gap-8">
+    {logos.map((logo, index) => (
+      <div
+        key={index}
+        className="
+        h-40 rounded-3xl
+        bg-[#FAFAFA]
+        border border-[#ECECEC]
+        flex items-center justify-center
+        transition-all duration-300 ease-in-out
+        hover:bg-white
+        hover:-translate-y-2
+        hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]
+        cursor-pointer"
+      >
+        <Image
+          src={logo}
+          alt="logo"
+          width={100}
+          height={90}
+          className="object-contain"
+        />
+      </div>
+    ))}
+  </div>
+
+</section>
+
+  <Footer /> 
       
     </>
   );

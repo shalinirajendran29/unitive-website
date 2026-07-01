@@ -3,6 +3,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import WhyChooseUs from "@/components/digitalwhychooseus";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation} from "swiper/modules";
 import "swiper/css/pagination";
@@ -546,6 +547,7 @@ export default function Home() {
     </button>
   </div>
 </section>
+<WhyChooseUs/>
 <Footer />
 
 

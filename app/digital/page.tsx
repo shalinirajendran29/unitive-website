@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DigitalExpertise from "@/components/digital";
 import WhyChooseUs from "@/components/digitalwhychooseus";
+import DigitalProducts from "@/components/digitalproducts";
 
 
 
@@ -11,64 +12,71 @@ export default function DigitalPage() {
     <>
       <Navbar />
 
-      <section
-        className="relative h-[650px] bg-cover bg-center flex items-center"
-        style={{
-          backgroundImage: "url('/images/digital-banner.png')", 
-        }}
-      >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+ <section className="relative h-[650px] overflow-hidden flex items-center">
 
-        <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-12 w-full">
-          <div className="max-w-[650px]">
+  {/* Background Video */}
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    className="absolute inset-0 w-full h-full object-cover scale-110"
+  >
+    <source src="/video/engineering.mp4" type="video/mp4" />
+  </video>
 
-            {/* Badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-gray-500 bg-black/40 mb-8">
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-              <Image
-                src="/images/digitalbannericon.png"
-                alt="icon"
-                width={18}
-                height={18}
-              />
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto w-full px-8 lg:px-12">
+    <div className="max-w-[650px]">
 
-              <span className="text-white text-sm font-semibold uppercase">
-                Digital Transformation Leaders
-              </span>
+      {/* Badge */}
+      <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-gray-500 bg-black/40 mb-8">
+        <Image
+          src="/images/digitalbannericon.png"
+          alt="icon"
+          width={18}
+          height={18}
+        />
+        <span className="text-white text-sm font-semibold uppercase">
+          Digital Transformation Leaders
+        </span>
+      </div>
 
-            </div>
+      {/* Heading */}
+      <h1 className="text-white text-[55px] font-bold leading-tight">
+        TRANSFORM IDEAS TO
+        <span className="block text-[#FE6B1F]">
+          DIGITAL SOLUTIONS
+        </span>
+      </h1>
 
-            {/* Heading */}
-            <h1 className="text-white font-bold leading-[1.1] text-[50px]">
-              TRANSFORM IDEAS TO <span className="text-[#FE6B1F]">DIGITAL SOLUTIONS
-              </span>
-            </h1>
+      {/* Description */}
+      <p className="mt-8 text-white text-lg leading-8">
+        At Unitive, we deliver smart software solutions that empower
+        businesses to innovate, grow, and succeed. Our scalable
+        technologies are designed to create lasting impact and
+        long-term value.
+      </p>
 
-            {/* Description */}
-            <p className="mt-8 text-white/90 text-xl leading-10 max-w-[700px]">
-              At Unitive, we deliver smart software solutions that empower
-              businesses to innovate, grow, and succeed. Our scalable
-              technologies are designed to create lasting impact and
-              long-term value.
-            </p>
+      {/* Buttons */}
+      <div className="flex gap-5 mt-10">
+        <button className="bg-[#FE6B1F] hover:bg-[#e85d15] text-white px-8 py-4 rounded-xl font-semibold">
+          EXPLORE SERVICES
+        </button>
 
-            {/* Buttons */}
-            <div className="flex gap-5 mt-10">
+        <button className="border border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-black">
+          PARTNER WITH US
+        </button>
+      </div>
 
-              <button className="bg-[#FE6B1F] hover:bg-[#e85d15] text-white font-semibold px-8 py-4 rounded-xl transition">
-                EXPLORE SERVICES
-              </button>
+    </div>
+  </div>
 
-              <button className="border border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white hover:text-black transition">
-                PARTNER WITH US
-              </button>
-
-            </div>
-
-          </div>
-        </div>
-      </section>
+</section>
        <DigitalExpertise />
     <WhyChooseUs />
    

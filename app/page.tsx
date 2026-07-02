@@ -92,7 +92,7 @@ export default function Home() {
 
           <h1 className="text-4xl font-bold leading-tight mb-6">
           ENGINEERING EXCELLENCE THROUGH 
-            <span className="text-orange-500"> INNOVATION</span> 
+            <span className="text-orange-500"> INNOVATIO</span> 
           </h1>
 
           <p className="text-gray-600 mb-8 max-w-xl">

@@ -96,7 +96,7 @@ export default function About() {
   {/* Bottom Left Pattern */}
   <div className="absolute bottom-8 left-8 opacity-20">
     <Image
-      src="/images/vector 4.png"
+      src="/images/Bottom.png"
       alt="pattern"
       width={180}
       height={180}

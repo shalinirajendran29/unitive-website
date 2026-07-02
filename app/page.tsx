@@ -334,7 +334,7 @@ export default function Home() {
     <SwiperSlide>
       <div className="group relative overflow-hidden rounded-3xl shadow-lg">
         <Image
-          src="/images/retailerp.png"
+          src="/images/Retailerp.png"
           alt="Jewellery Retail ERP"
           width={350}
           height={450}
@@ -369,7 +369,7 @@ export default function Home() {
     <SwiperSlide>
       <div className="group relative overflow-hidden rounded-3xl shadow-lg">
         <Image
-          src="/images/erp.png"
+          src="/images/ERP.png"
           alt="Jewellery Manufacturing ERP"
           width={350}
           height={450}

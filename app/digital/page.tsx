@@ -12,7 +12,7 @@ export default function DigitalPage() {
     <>
       <Navbar />
 
- <section className="relative h-[650px] overflow-hidden flex items-center">
+ <section className="relative h-[520px] overflow-hidden flex items-center">
 
   {/* Background Video */}
   <video
@@ -79,6 +79,7 @@ export default function DigitalPage() {
 </section>
        <DigitalExpertise />
     <WhyChooseUs />
+    <DigitalProducts />
    
       <Footer />
     </>

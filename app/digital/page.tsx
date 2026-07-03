@@ -23,7 +23,7 @@ export default function DigitalPage() {
     preload="auto"
     className="absolute inset-0 w-full h-full object-cover scale-110"
   >
-    <source src="/video/engineering.mp4" type="video/mp4" />
+    <source src="/video/CAE Banner Video.mp4" type="video/mp4" />
   </video>
 
   {/* Dark Overlay */}

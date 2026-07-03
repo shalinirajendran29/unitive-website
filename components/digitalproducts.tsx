@@ -12,25 +12,25 @@ const products = [
     title: "Manufacturing Jewellery ERP",
     description:
       "Transform the way you manage your jewellery business.",
-    image: "/images/ERP.png",
+    image: "/images/digitalmanifacturingerp.png",
   },
   {
     title: "Gate Management System",
     description:
       "Transform the way you manage your jewellery business.",
-    image: "/images/products/gate-management.jpg",
+    image: "/images/digitalgate.png",
   },
   {
     title: "Task Management System",
     description:
       "Transform the way you manage your jewellery business.",
-    image: "/images/products/task-management.jpg",
+    image: "/images/digitaltaskmanagement.png",
   },
   {
     title: "Accounting Software",
     description:
       "Transform the way you manage your jewellery business.",
-    image: "/images/products/accounting.jpg",
+    image: "/images/digitalaccounting.png",
   },
 ];
 

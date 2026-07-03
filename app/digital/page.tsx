@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import DigitalExpertise from "@/components/digital";
 import WhyChooseUs from "@/components/digitalwhychooseus";
 import DigitalProducts from "@/components/digitalproducts";
-
+import Contactform from "@/components/contactform";
 
 
 export default function DigitalPage() {
@@ -80,7 +80,7 @@ export default function DigitalPage() {
        <DigitalExpertise />
     <WhyChooseUs />
     <DigitalProducts />
-   
+    <Contactform />
       <Footer />
     </>
   );

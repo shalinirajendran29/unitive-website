@@ -135,11 +135,11 @@ export default function DigitalExpertise() {
                 key={index}
                 onClick={() => setActive(index)}
                className={`w-full rounded-[20px] h-[90px] px-6 flex items-center justify-between transition-all duration-300 border
-${
-  active === index
-    ? "bg-[#162334] text-white border-[#FFD8CC] shadow-lg"
-    : "bg-[#F7F7F7] text-[#1F2937] border-[#ECECEC] hover:bg-white hover:shadow-md"
-}`}
+             ${
+            active === index
+            ? "bg-[#162334] text-white border-[#FFD8CC] shadow-lg"
+            : "bg-[#F7F7F7] text-[#1F2937] border-[#ECECEC] hover:bg-white hover:shadow-md"
+           }`}
               >
 
                 <span className="font-semibold text-xl">

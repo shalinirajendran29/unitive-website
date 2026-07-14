@@ -58,9 +58,10 @@ export default function WhyChooseUs() {
       <div className="container mx-auto px-6">
 
         <div className="mb-14 text-center">
-          <h2 className="text-4xl font-bold text-[#FE5800]">
-            Why Choose Us
-          </h2>
+          <h2 className="inline-block text-5xl font-bold mb-4 bg-gradient-to-r from-[#FE5800]  to-[#3B3B3B] bg-clip-text text-transparent">
+  Why Choose Us
+      </h2>
+
 
           <p className="mx-auto mt-4 max-w-2xl text-[#494141]">
             Delivering innovative solutions, exceptional quality, and measurable

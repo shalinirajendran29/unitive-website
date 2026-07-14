@@ -3,6 +3,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 import WhyChooseUs from "@/components/digitalwhychooseus";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation} from "swiper/modules";
@@ -25,7 +26,7 @@ export default function Home() {
   return (
     <>
     <Navbar />
-   <section className="min-h-[85vh] px-24">
+   <section className="min-h-screen px-5 sm:px-6 md:px-10 lg:px-16 xl:px-24">
 
   <Swiper
     modules={[Pagination, Autoplay]}
@@ -40,24 +41,24 @@ export default function Home() {
 
     {/* Slide 1 - DIGITAL (உங்க existing content) */}
     <SwiperSlide>
-      <div className="flex items-center justify-between min-h-[85vh] gap-20">
+     <div className="flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen gap-10 lg:gap-20 py-10">
 
-        <div className="w-[45%]">
-          <p className="inline-block border border-orange-500 text-orange-500 px-4 py-2 rounded-full text-sm mb-6">
+        <div className="w-full lg:w-[45%] text-center lg:text-left">
+          <p className="inline-block border border-orange-500 text-orange-500 px-4 py-2 rounded-full text-xs sm:text-sm mb-6">
             DIGITAL TRANSFORMATION LEADERS
           </p>
 
-          <h1 className="text-4xl font-bold leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
             TRANSFORM IDEAS INTO <br />
             DIGITAL <span className="text-orange-500">SOLUTIONS</span>
           </h1>
 
-          <p className="text-gray-600 mb-8 max-w-xl">
+         <p className="text-gray-600 text-sm sm:text-base mb-8 max-w-xl mx-auto lg:mx-0">
           At Unitive, we deliver smart software solutions that empower businesses to innovate, grow, and succeed. 
           Our scalable technologies are designed to create lasting impact and long-term value.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button className="bg-orange-500 text-white px-6 py-3 rounded-lg">
               Explore Our Solutions
             </button>
@@ -68,13 +69,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[55%] flex justify-center">
+        <div className="w-full lg:w-[55%] flex justify-center">
           <Image
             src="/images/heroimage.png"
             alt="Hero"
             width={500}
             height={500}
-            className="w-[650px] h-auto"
+            className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
           />
         </div>
 
@@ -117,7 +118,7 @@ export default function Home() {
             alt="Engineering"
             width={500}
             height={500}
-            className="w-[650px] h-auto"
+           className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
           />
         </div>
 
@@ -128,92 +129,29 @@ export default function Home() {
 
 </section>
     {/* section 2 */}
-       <section className="py-20 px-24">
+     <div className="border-y border-orange-200 py-4 mb-16">
+  <div className="flex overflow-x-auto whitespace-nowrap gap-8 px-4 no-scrollbar">
+    <span className="bg-gradient-to-r from-[#FE5800] to-[#5B5B5B] bg-clip-text text-transparent text-3xl font-light">
+      OUR EXPERTISE
+    </span>
 
-        {/* Heading */}
-        <div className="overflow-hidden border-y border-orange-200 py-4 mb-16">
-          <div className="flex gap-12 text-5xl font-light text-orange-300 whitespace-nowrap">
-            <span>OUR EXPERTISE</span>
-            <span>OUR EXPERTISE</span>
-            <span>OUR EXPERTISE</span>
-            <span>OUR EXPERTISE</span>
-          </div>
-        </div>
+    <span className="bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent text-3xl font-light">
+      OUR EXPERTISE
+    </span>
 
-        {/* Cards */}
-        <div className="grid grid-cols-3 gap-10">
+    <span className="bg-gradient-to-r from-[#FE5800] to-[#5B5B5B] bg-clip-text text-transparent text-3xl font-light">
+      OUR EXPERTISE
+    </span>
 
-         <div className="border border-orange-100 rounded-3xl p-8
-                transition-all duration-300
-                hover:shadow-xl
-                hover:-translate-y-3
-                hover:border-orange-500
-                hover:bg-orange-50">
-            <div className="flex items-center gap-3 mb-4">
-              <Image
-                src="/images/digital.png"
-                alt="Digital"
-                width={60}
-                height={60}
-                 className="mb-6"
-             />
-          
-            <h2 className="text-3xl font-semibold mb-4">DIGITAL</h2>
-             </div>
-            <p className="text-gray-600 leading-8 mb-8">
-             Creating innovative software solutions for the digital future. 
-             From custom application to AI-powered platforms, we turn ideas into impact.
-            </p>
-            <button className="text-orange-500 font-medium">Learn More →</button>
-          </div>
-<div className="border border-orange-100 rounded-3xl p-8
-                transition-all duration-300
-                hover:shadow-xl
-                hover:-translate-y-3
-                hover:border-orange-500
-                hover:bg-orange-50">
-             <div className="flex items-center gap-3 mb-4">
-              <Image
-                src="/images/engineering.png"
-                alt="Engineering"
-                width={60}
-                height={60}
-                 className="mb-6"
-             />
-            <h2 className="text-3xl font-semibold mb-4">ENGINEERING</h2>
-            </div>
-            <p className="text-gray-600 leading-8 mb-8">
-              Delivering advanced engineering solutions for innovation and excellence.
-               Enhancing performance through precision and expertise.
-            </p>
-            <button className="text-orange-500 font-medium">Learn More →</button>
-          </div>
-
-         <div className="border border-orange-100 rounded-3xl p-8
-                transition-all duration-300
-                hover:shadow-xl
-                hover:-translate-y-3
-                hover:border-orange-500
-                hover:bg-orange-50">
-             <div className="flex items-center gap-3 mb-4">
-              <Image
-                src="/images/cae.png"
-                alt="cae"
-                width={60}
-                height={60}
-                 className="mb-6"
-             />
-            <h2 className="text-3xl font-semibold mb-4">CAE</h2>
-            </div>
-            <p className="text-gray-600 leading-8 mb-8">
-             Delivering advanced CAE solutions for efficient product development.
-              Enhancing performance while reducing risks and costs.
-            </p>
-            <button className="text-orange-500 font-medium">Learn More →</button>
-          </div>
-
-        </div>
-      </section>
+    <span className="bg-gradient-to-r from-[#FE5800] to-[#5B5B5B] bg-clip-text text-transparent text-3xl font-light">
+      OUR EXPERTISE
+    </span>
+    <span className="bg-gradient-to-r from-[#FE5800] to-[#5B5B5B] bg-clip-text text-transparent text-3xl font-light">
+      OUR EXPERTISE
+    </span>
+    
+  </div>
+</div>
       {/* About Us Section */}
 <section className="relative py-24 px-24 bg-[#F5F5F5] overflow-hidden">
 
@@ -252,9 +190,9 @@ export default function Home() {
 
     {/* Right Content */}
     <div>
-      <h2 className="text-5xl font-bold text-orange-500 mb-4">
-        ABOUT US
-      </h2>
+    <h2 className="inline-block text-5xl font-bold mb-4 bg-gradient-to-r from-[#FE5800]  to-[#3B3B3B] bg-clip-text text-transparent">
+  ABOUT US
+</h2>
 
       <h3 className="text-2xl text-gray-700 mb-6">
         We Build What Matters
@@ -268,10 +206,11 @@ export default function Home() {
       </p>
 
      
-
-      <button className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">
-        Learn More →
-      </button>
+ <Link href="/about">
+  <button className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">
+    Learn More →
+  </button>
+</Link>
     </div>
 
   </div>
@@ -284,10 +223,10 @@ export default function Home() {
   <div className="flex justify-between items-center mb-16">
 
     <div>
-      <h2 className="text-5xl font-bold">
-        <span className="text-orange-500">SMART BUSINESS</span>{" "}
-        <span className="text-gray-900">PRODUCTS</span>
-      </h2>
+     
+      <h2 className="inline-block text-5xl font-bold mb-4 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
+ SMART BUSINESS PRODUCTS
+</h2>
 
       <p className="text-gray-500 mt-3 text-lg">
         Secure, integrated software solutions built for modern businesses
@@ -477,19 +416,20 @@ export default function Home() {
 
 </section>
 {/* Trusted By Industry Leaders */}
-<section className="py-24 px-24 bg-white">
+<section className="py-24  bg-white">
+   <div className="max-w-7xl mx-auto px-6">
 
   {/* Heading */}
-  <div className="text-center mb-16">
-    <h2 className="text-5xl font-bold">
-      <span className="text-[#FE5800]">Trusted By</span>{" "}
-      <span className="text-[#000000]">Industry Leaders</span>
-    </h2>
+ <div className="text-center mb-16 ">
+  <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
+    Trusted By Industry Leaders
+  </h2>
 
     <p className="text-gray-500 text-xl mt-4 leading-9">
       Delivering reliable engineering solutions for OEMs and Tier-1 suppliers
-      across global industries
+      across <br/>global industries
     </p>
+  </div>
   </div>
 
   {/* Logo Grid */}
@@ -525,8 +465,7 @@ export default function Home() {
   <div
     className="relative min-h-[200px] rounded-[30px] overflow-hidden flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-10"
     style={{
-      backgroundImage:
-         "linear-gradient(90deg, rgba(160,55,0,0.75) 0%, rgba(160,55,0,0.6) 50%, rgba(0,0,0,0.85) 100%),   url('/images/background.jpg')",
+      backgroundImage:"url('/images/home bg.png')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",

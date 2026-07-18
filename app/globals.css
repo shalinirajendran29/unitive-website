@@ -25,6 +25,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Slim, on-brand scrollbar for the AI assistant panel */
+.unitive-chat-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(254, 88, 0, 0.35) transparent;
+}
+
+.unitive-chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.unitive-chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.unitive-chat-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(254, 88, 0, 0.3);
+  border-radius: 999px;
+}
+
+.unitive-chat-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(254, 88, 0, 0.55);
+}
+
 .heroSwiper .swiper-pagination {
   bottom: 30px !important;
 }

@@ -36,14 +36,15 @@ const products = [
 
 export default function DigitalProducts() {
   return (
-    <section className="py-24 bg-white">
+    <section className="pt-8 pb-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#FE5800]">
-            Our Digital Products
-          </h2>
+        
+           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
+          Our Digital Products
+      </h2>
 
           <p className="mt-5 text-lg text-gray-600 max-w-3xl mx-auto leading-8">
             Innovative software solutions designed to streamline

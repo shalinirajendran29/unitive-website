@@ -46,9 +46,9 @@ export default function IndustriesWeServe() {
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between">
         {/* Left: heading + description */}
         <div className="max-w-sm shrink-0 text-left">
-          <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
-            <span className="text-[#FE5800]">Industries</span> We Serve
-          </h2>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
+           Industries We Serve
+      </h2>
           <p className="mt-4 text-base text-gray-500 md:text-lg">
             Trusted by engineering teams across high-stakes industries where
             simulation accuracy is non-negotiable.

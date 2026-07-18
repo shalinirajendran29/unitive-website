@@ -27,7 +27,7 @@ export default function DigitalPage() {
   </video>
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50"></div>
+  <div className="absolute inset-0 bg-black/50"></div>
 
   {/* Content */}
   <div className="relative z-10 w-full pl-8 sm:pl-10 md:pl-16 lg:pl-24 pr-6">

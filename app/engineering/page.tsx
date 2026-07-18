@@ -2,10 +2,11 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EngineeringExpertise from "@/components/engineering";
-import WhyChooseUs from "@/components/digitalwhychooseus";
+import WhyChooseUs from "@/components/engineeringwhychooseus";
 import IndustriesWeServe from "@/components/industries";
-import Contactform from "@/components/contactform";
+import Contactform from "@/components/engineeringcontact";
 import AutodeskSection from "@/components/autodesk";
+import Link from "next/link";
 
 
 export default function EngineeringPage() {
@@ -31,11 +32,11 @@ export default function EngineeringPage() {
   <div className="absolute inset-0 bg-black/50"></div>
 
   {/* Content */}
-  <div className="relative z-10 max-w-7xl mx-auto w-full px-8 lg:px-12">
-    <div className="max-w-[650px]">
+  <div className="relative z-10 w-full pl-8 sm:pl-10 md:pl-16 lg:pl-24 pr-6">
+     <div className="max-w-[700px]">
 
       {/* Badge */}
-      <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-gray-500 bg-black/40 mb-8">
+     <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-gray-500 bg-black/40 mb-8">
         <Image
           src="/images/digitalbannericon.png"
           alt="icon"
@@ -48,11 +49,9 @@ export default function EngineeringPage() {
       </div>
 
       {/* Heading */}
-      <h1 className="text-white text-[55px] font-bold leading-tight">
-        Engineering Excellence Through <span className="block text-[#FE6B1F]">
-          Innovation
-        </span>
-      </h1>
+      <h1 className="text-3xl sm:text-3xl md:text-5xl font-bold leading-[1.1] mb-6 lg:max-w-[650px] text-white">
+            CREATING IMPACT THROUGH <span className="text-orange-500">ENGINEERING</span>
+          </h1>
 
       {/* Description */}
       <p className="mt-8 text-white text-lg leading-8">
@@ -62,13 +61,17 @@ export default function EngineeringPage() {
 
       {/* Buttons */}
       <div className="flex gap-5 mt-10">
+        <Link href="/digital">
         <button className="bg-[#FE6B1F] hover:bg-[#e85d15] text-white px-8 py-4 rounded-xl font-semibold">
           EXPLORE SERVICES
         </button>
+        </Link>
 
-        <button className="border border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-black">
-          PARTNER WITH US
+        <Link href="/contact">
+         <button className="border border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-black">
+          Contact Us
         </button>
+        </Link>
       </div>
 
     </div>

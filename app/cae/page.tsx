@@ -42,24 +42,19 @@ export default function CaePage() {
           height={18}
         />
         <span className="text-white text-sm font-semibold uppercase">
-          Digital Transformation Leaders
+         ADVANCE SIMULATION EXPERTS
         </span>
       </div>
 
       {/* Heading */}
-      <h1 className="text-white text-[55px] font-bold leading-tight">
-        TRANSFORM IDEAS TO
-        <span className="block text-[#FE6B1F]">
-          DIGITAL SOLUTIONS
-        </span>
+      <h1 className="text-white text-[50px] font-bold leading-tight">NEXT-GEN<span className="block text-[#FE6B1F]">CAE</span>
+        CONSULTING SERVICES
       </h1>
 
       {/* Description */}
       <p className="mt-8 text-white text-lg leading-8">
-        At Unitive, we deliver smart software solutions that empower
-        businesses to innovate, grow, and succeed. Our scalable
-        technologies are designed to create lasting impact and
-        long-term value.
+       Unitive leads the way in virtual engineering. From automotive 
+       crash simulations to complex aerospace fluid dynamics, we provide data-driven insights
       </p>
 
       {/* Buttons */}

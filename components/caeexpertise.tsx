@@ -68,9 +68,9 @@ export default function ExpertiseSection() {
     <section className="w-full bg-white py-16 px-4 md:px-10">
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-red-700">
-          Our Specialized Expertise
-        </h2>
+       <h2 className="inline-block text-3xl sm:text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
+        Our specialized expertise
+      </h2>
         <p className="mt-4 text-gray-600 text-base md:text-lg">
           Delivering high-fidelity virtual engineering solutions to accelerate
           your product development cycle and optimize manufacturing

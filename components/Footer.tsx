@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -48,11 +49,18 @@ export default function Footer() {
               Service
             </h3>
 
-            <ul className="space-y-3 text-gray-600 text-sm sm:text-base">
-              <li>Digital</li>
-              <li>Engineering</li>
-              <li>CAE</li>
-            </ul>
+           <ul className="space-y-3 text-gray-600 text-sm sm:text-base">
+            <li>
+              <Link href="/digital">Digital</Link>
+             </li>
+           <li>
+           <Link href="/engineering">Engineering</Link>
+           </li>
+           <li>
+          <Link href="/cae">CAE</Link>
+          </li>
+         
+        </ul>
           </div>
 
           {/* Company */}
@@ -61,12 +69,21 @@ export default function Footer() {
               Company
             </h3>
 
-            <ul className="space-y-3 text-gray-600 text-sm sm:text-base">
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li>Terms of Services</li>
-              <li>Privacy Policy</li>
-            </ul>
+            
+<ul className="space-y-3 text-gray-600 text-sm sm:text-base">
+  <li>
+    <Link href="/about">About Us</Link>
+  </li>
+  <li>
+    <Link href="/contact">Contact Us</Link>
+  </li>
+  <li>
+    <Link href="/terms">Terms of Services</Link>
+  </li>
+  <li>
+    <Link href="/privacy-policy">Privacy Policy</Link>
+  </li>
+</ul>
           </div>
 
           {/* Contact */}
@@ -112,7 +129,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-300 mt-10 lg:mt-12 pt-6 text-center text-gray-500 text-sm sm:text-base">
+        <div className="border-t border-orange-500 mt-10 lg:mt-12 pt-6 text-center text-gray-500 text-sm sm:text-base">
           Copyright © 2026 Unitive. All Rights Reserved.
         </div>
       </div>

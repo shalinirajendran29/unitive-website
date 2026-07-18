@@ -11,7 +11,7 @@ import {
   XCircle,
 } from "lucide-react";
 
-const solutions = ["FEA Analysis", "CFD Simulation", "Moldflow"];
+const solutions = ["Digital", "Engineering", "CAE"];
 
 // 🔑 Replace these with your EmailJS credentials (from emailjs.com dashboard)
 const EMAILJS_SERVICE_ID = "service_3ulb8xl";
@@ -73,16 +73,7 @@ export default function Contactform() {
   return (
     <section className="w-full bg-white py-16 px-4 sm:px-8 lg:px-16">
       {/* Heading */}
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="inline-block text-3xl sm:text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
-      Need Expert CAE Support
-      </h2>
-
-        <p className="text-gray-500 mt-4 text-sm sm:text-base">
-          Collaborate with our engineering team for reliable simulations,
-          optimized designs, and faster product validation
-        </p>
-      </div>
+     
 
       {/* Content */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 bg-gray-50 rounded-3xl p-4 sm:p-8">
@@ -145,7 +136,7 @@ export default function Contactform() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label className="text-xs font-semibold tracking-wider text-gray-500 uppercase">
-                Client Name
+                Full Name
               </label>
               <input
                 type="text"
@@ -158,7 +149,7 @@ export default function Contactform() {
             </div>
             <div>
               <label className="text-xs font-semibold tracking-wider text-gray-500 uppercase">
-                Business Email
+                Work Email
               </label>
               <input
                 type="email"
@@ -173,7 +164,7 @@ export default function Contactform() {
 
           <div className="mt-6">
             <label className="text-xs font-semibold tracking-wider text-gray-500 uppercase">
-              Solution Stream
+            Subject
             </label>
             <div className="flex flex-wrap gap-3 mt-2">
               {solutions.map((solution) => (
@@ -195,7 +186,7 @@ export default function Contactform() {
 
           <div className="mt-6">
             <label className="text-xs font-semibold tracking-wider text-gray-500 uppercase">
-              Project Requirements
+             Message
             </label>
             <textarea
               name="requirements"

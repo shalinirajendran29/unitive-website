@@ -2,8 +2,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import contactform from "@/components/contactform";
-import Contactform from "@/components/contactform";
+import Contactform from "@/components/contactus";
 
 
 export default function About() {
@@ -32,18 +31,10 @@ export default function About() {
         <div className="absolute inset-0 bg-[#7d1d1d]/70"></div>
 
         <h1 className="relative z-10 text-5xl md:text-6xl font-bold text-white uppercase">
-          ABOUT US
+          Contact US
         </h1>
       </section>
   
-
-
- 
-
-
-
- 
-
 
   <Contactform /> 
   <Footer /> 

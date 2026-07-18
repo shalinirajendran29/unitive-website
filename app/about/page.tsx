@@ -107,30 +107,32 @@ export default function About() {
   <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
 
     {/* Heading */}
-    <div className="text-center mb-14">
-      <h2 className="text-4xl md:text-5xl font-bold text-[#E97A4D]">
-        OUR VISION & MISSION
+      <div className="text-center mb-10 sm:mb-14">
+        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
+     OUR VISION & MISSION
       </h2>
 
-      <p className="mt-4 text-gray-500 text-lg">
+      <p className="mt-4 text-gray-500 text-base sm:text-lg">
         We bridge the gap between creative digital experiences and robust technical engineering.
       </p>
     </div>
 
     {/* Cards */}
-    <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-8 sm:gap-10">
 
       {/* Mission */}
-      <div className="group border border-gray-200 rounded-[30px] p-8 transition-all duration-500 hover:bg-[#EA7747] hover:shadow-xl">
+      <div className="group border border-gray-200 rounded-[20px] sm:rounded-[30px] p-6 sm:p-8 transition-all duration-500 hover:bg-[#EA7747] hover:shadow-xl">
 
-        <div className="flex items-center gap-5 mb-6">
+
+         <div className="flex items-center gap-4 sm:gap-5 mb-6">
+
 
           <Image
             src="/images/ourvision.png"
             alt="mission"
             width={70}
             height={70}
-            className="block group-hover:hidden"
+            className="block group-hover:hidden w-12 h-12 sm:w-[70px] sm:h-[70px]"
           />
 
           <Image
@@ -138,16 +140,16 @@ export default function About() {
             alt="mission"
             width={70}
             height={70}
-            className="hidden group-hover:block"
+            className="hidden group-hover:block w-12 h-12 sm:w-[70px] sm:h-[70px]"
           />
 
-          <h3 className="text-4xl font-semibold text-[#E97A4D] group-hover:text-white">
+         <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#E97A4D] group-hover:text-white">
             Our Mission
           </h3>
 
         </div>
 
-        <p className="text-gray-700 leading-8 group-hover:text-white">
+         <p className="text-gray-700 leading-7 sm:leading-8 group-hover:text-white">
           We at unitive technologies, started to solve challenging problems from 2017 in software development 
           using future technologies such as Machine  Learning, Deep Learning, Computer Vision, Data Science etc., 
           that impress as well as provides best and accurate solution. 
@@ -157,16 +159,16 @@ export default function About() {
       </div>
 
       {/* Vision */}
-      <div className="group border border-gray-200 rounded-[30px] p-8 transition-all duration-500 hover:bg-[#EA7747] hover:shadow-xl">
+       <div className="group border border-gray-200 rounded-[20px] sm:rounded-[30px] p-6 sm:p-8 transition-all duration-500 hover:bg-[#EA7747] hover:shadow-xl">
 
-        <div className="flex items-center gap-5 mb-6">
+          <div className="flex items-center gap-4 sm:gap-5 mb-6">
 
           <Image
             src="/images/ourvision.png"
             alt="vision"
             width={70}
             height={70}
-            className="block group-hover:hidden"
+            className="block group-hover:hidden w-12 h-12 sm:w-[70px] sm:h-[70px]"
           />
 
           <Image
@@ -174,16 +176,16 @@ export default function About() {
             alt="vision"
             width={70}
             height={70}
-            className="hidden group-hover:block"
+            className="hidden group-hover:block w-12 h-12 sm:w-[70px] sm:h-[70px]"
           />
 
-          <h3 className="text-4xl font-semibold text-[#E97A4D] group-hover:text-white">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#E97A4D] group-hover:text-white">
             Our Vision
           </h3>
 
         </div>
 
-        <p className="text-gray-700 leading-8 group-hover:text-white">
+        <p className="text-gray-700 leading-7 sm:leading-8 group-hover:text-white">
          “Our main aim is to develop in a constant manner and become a leading performer in this
           competitive global marketplace. Fortunately, we have been able to gather a crew of professionals that can shape and mold their collective experiences,
           all of them posses outstanding talent that can help to accelerate your organization”
@@ -197,28 +199,27 @@ export default function About() {
 
 </section>
 {/* Trusted By Industry Leaders */}
-<section className="py-24 px-24 bg-white">
-
+<section className="pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-12 sm:pb-16 md:pb-20 px-5 sm:px-12 md:px-16 lg:px-24 bg-white">
   {/* Heading */}
-  <div className="text-center mb-16">
-    <h2 className="text-5xl font-bold">
-      <span className="text-[#FE5800]">Trusted By</span>{" "}
-      <span className="text-[#000000]">Industry Leaders</span>
-    </h2>
+   <div className="text-center mb-12 sm:mb-16">
+    
+     <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
+      Trusted By Industry Leaders
+      </h2>
 
-    <p className="text-gray-500 text-xl mt-4 leading-9">
+     <p className="text-gray-500 text-base sm:text-lg md:text-xl mt-4 leading-7 md:leading-9">
       Delivering reliable engineering solutions for OEMs and Tier-1 suppliers
       across global industries
     </p>
   </div>
 
   {/* Logo Grid */}
-  <div className="grid grid-cols-5 gap-8">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
     {logos.map((logo, index) => (
       <div
         key={index}
         className="
-        h-40 rounded-3xl
+         h-24 sm:h-32 md:h-40 rounded-2xl sm:rounded-3xl
         bg-[#FAFAFA]
         border border-[#ECECEC]
         flex items-center justify-center
@@ -233,7 +234,7 @@ export default function About() {
           alt="logo"
           width={100}
           height={90}
-          className="object-contain"
+          className="object-contain max-w-[70%] sm:max-w-full h-auto"
         />
       </div>
     ))}

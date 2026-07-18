@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import DigitalExpertise from "@/components/digital";
+import EngineeringExpertise from "@/components/engineering";
 import WhyChooseUs from "@/components/digitalwhychooseus";
 import IndustriesWeServe from "@/components/industries";
 import Contactform from "@/components/contactform";
@@ -43,24 +43,21 @@ export default function EngineeringPage() {
           height={18}
         />
         <span className="text-white text-sm font-semibold uppercase">
-          Digital Transformation Leaders
+         ENGINEERING EXCELLENCE
         </span>
       </div>
 
       {/* Heading */}
       <h1 className="text-white text-[55px] font-bold leading-tight">
-        TRANSFORM IDEAS TO
-        <span className="block text-[#FE6B1F]">
-          DIGITAL SOLUTIONS
+        Engineering Excellence Through <span className="block text-[#FE6B1F]">
+          Innovation
         </span>
       </h1>
 
       {/* Description */}
       <p className="mt-8 text-white text-lg leading-8">
-        At Unitive, we deliver smart software solutions that empower
-        businesses to innovate, grow, and succeed. Our scalable
-        technologies are designed to create lasting impact and
-        long-term value.
+       At Unitive, we provide advanced engineering solutions that drive innovation, efficiency, and product excellence. 
+       We help organizations accelerate development and bring high-quality products to market
       </p>
 
       {/* Buttons */}
@@ -79,7 +76,7 @@ export default function EngineeringPage() {
 
 </section>
       <AutodeskSection />
-       <DigitalExpertise />
+       <EngineeringExpertise />
     <WhyChooseUs />
     <IndustriesWeServe />
     <Contactform />

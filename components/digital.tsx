@@ -110,9 +110,10 @@ export default function DigitalExpertise() {
         {/* Heading */}
 
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-orange-500">
-            Our Digital Expertise
-          </h2>
+        
+           <h2 className="inline-block text-3xl sm:text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-[#FE5800] to-[#3B3B3B] bg-clip-text text-transparent">
+       Our Digital Expertise
+      </h2>
 
           <p className="text-gray-600 mt-5 text-lg">
             Transforming ideas into intelligent digital experiences.

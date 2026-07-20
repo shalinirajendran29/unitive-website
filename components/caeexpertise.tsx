@@ -37,10 +37,10 @@ const expertiseData: ExpertiseItem[] = [
     description:
       "Aerodynamics, thermal management, and cooling system simulations to optimize airflow, reduce drag, and improve overall vehicle efficiency.",
     images: [
-      "/images/cfd-1.jpg",
-      "/images/cfd-2.jpg",
-      "/images/cfd-3.jpg",
-      "/images/cfd-4.jpg",
+      "/images/fae1.png",
+      "/images/fae2.png",
+      "/images/fae3.png",
+      "/images/fae4.png",
     ],
   },
   {
@@ -50,10 +50,10 @@ const expertiseData: ExpertiseItem[] = [
     description:
       "Plastic injection molding simulation to optimize part design, reduce defects, and shorten time-to-market for polymer components.",
     images: [
-      "/images/moldflow-1.jpg",
-      "/images/moldflow-2.jpg",
-      "/images/moldflow-3.jpg",
-      "/images/moldflow-4.jpg",
+        "/images/fae1.png",
+      "/images/fae2.png",
+      "/images/fae3.png",
+      "/images/fae4.png",
     ],
   },
 ];
@@ -120,14 +120,21 @@ export default function ExpertiseSection() {
         {/* Right: Active content */}
         <div className="bg-[#FFF9F7] rounded-[28px] border border-[#F6E8E3] p-10 shadow-sm">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-2xl text-red-600">&#9881;&#65039;</span>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-              {activeItem.title}{" "}
-              {activeItem.highlight && (
-                <span className="text-red-600">{activeItem.highlight}</span>
-              )}
-            </h3>
-          </div>
+  <Cog
+    size={28}
+    strokeWidth={2}
+    className="text-[#FE6B1F]"
+  />
+
+  <h3 className="text-2xl md:text-3xl font-bold text-[#111827]">
+    {activeItem.title}{" "}
+    {activeItem.highlight && (
+      <span className="text-[#FE6B1F]">
+        {activeItem.highlight}
+      </span>
+    )}
+  </h3>
+</div>
 
           <p className="text-gray-600 leading-relaxed mb-6">
             {activeItem.description}

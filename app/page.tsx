@@ -9,7 +9,45 @@ import { Pagination, Autoplay, Navigation} from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/navigation";
+import AutodeskSection from "@/components/autodesk";
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
+
 export default function Home() {
+  const imageRef1 = useRef<HTMLDivElement>(null);
+const imageRef2 = useRef<HTMLDivElement>(null);
+
+useEffect(() => {
+  gsap.fromTo(
+    imageRef1.current,
+    {
+      rotateY: 0,
+    },
+    {
+      rotateY: 360,
+      duration: 5,
+      repeat: -1,
+      ease: "linear",
+      transformOrigin: "center center",
+      force3D: true,
+    }
+  );
+
+  gsap.fromTo(
+    imageRef2.current,
+    {
+      rotateY: 0,
+    },
+    {
+      rotateY: 360,
+      duration: 5,
+      repeat: -1,
+      ease: "linear",
+      transformOrigin: "center center",
+      force3D: true,
+    }
+  );
+}, []);
     const logos = [
     "/images/lt.png",
     "/images/autosys.png",
@@ -27,22 +65,24 @@ export default function Home() {
     <Navbar />
     <section className="min-h-screen px-5 sm:px-6 md:px-10 lg:px-16 xl:px-24 overflow-hidden w-full">
 
-  <Swiper
-    modules={[Pagination, Autoplay]}
-    pagination={{ clickable: true }}
-    autoplay={{
-      delay: 3000,
-      disableOnInteraction: false,
-    }}
-    loop={true}
-    className="heroSwiper"
-  >
+ <Swiper
+  modules={[Pagination, Autoplay, Navigation]}
+  pagination={{ clickable: true }}
+  autoplay={{
+    delay: 5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  }}
+  loop={true}
+  speed={1000}
+  className="heroSwiper"
+>
 
     {/* Slide 1 - DIGITAL */}
     <SwiperSlide>
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen gap-10 lg:gap-20 pt-10 pb-28 lg:py-10">
 
-        <div className="w-full lg:w-1/2 text-center lg:text-left">
+       <div className="w-full lg:w-1/2 text-center lg:text-left -mt-6 lg:-mt-16">
           <p className="inline-block border border-orange-500 text-orange-500 px-4 py-2 rounded-full text-xs sm:text-sm mb-6">
             DIGITAL TRANSFORMATION LEADERS
           </p>
@@ -71,7 +111,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div
+  ref={imageRef1}
+  className="w-full lg:w-1/2 flex justify-center"
+  style={{
+    perspective: "1000px",
+    transformStyle: "preserve-3d",
+  }}
+>
           <Image
             src="/images/heroimage.png"
             alt="Hero"
@@ -117,7 +164,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div
+  ref={imageRef2}
+  className="w-full lg:w-1/2 flex justify-center"
+  style={{
+    perspective: "1000px",
+    transformStyle: "preserve-3d",
+  }}
+>
           <Image
             src="/images/banner2.png"
             alt="Engineering"
@@ -157,6 +211,112 @@ export default function Home() {
     
   </div>
 </div>
+<section className="pt-2 pb-10 sm:pt-4 sm:pb-12 lg:pt-6 lg:pb-16 px-5 sm:px-8 md:px-10 lg:px-16 xl:px-24 bg-white">
+
+  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6">
+
+    {/* DIGITAL */}
+    <Link href="/digital">
+      <div className="group h-full rounded-2xl border border-[#ECECEC] bg-white p-6 lg:p-7 transition-all duration-300 hover:border-[#FE5800] hover:shadow-lg cursor-pointer">
+
+        <div className="flex items-center gap-3 mb-4">
+          <Image
+            src="/images/digital.png"
+            alt="Digital"
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
+
+          <h3 className="text-[26px] font-semibold text-[#1F2937]">
+            DIGITAL
+          </h3>
+        </div>
+
+        <p className="text-[#667085] text-[15px] leading-8 mb-6">
+          Creating innovative software solutions for the digital future.
+          From custom applications to AI-powered platforms, we turn ideas into impact.
+        </p>
+
+        <div className="flex items-center gap-2 text-[#FE5800] font-medium">
+          Learn More
+          <span className="group-hover:translate-x-1 transition-transform">
+            →
+          </span>
+        </div>
+
+      </div>
+    </Link>
+
+    {/* ENGINEERING */}
+    <Link href="/engineering">
+      <div className="group h-full rounded-2xl border border-[#ECECEC] bg-white p-6 lg:p-7 transition-all duration-300 hover:border-[#FE5800] hover:shadow-lg cursor-pointer">
+
+        <div className="flex items-center gap-3 mb-4">
+          <Image
+            src="/images/engineering.png"
+            alt="Engineering"
+            width={24}
+            height={24}
+            className="w-6 h-6"
+          />
+
+          <h3 className="text-[26px] font-semibold text-[#1F2937]">
+            ENGINEERING
+          </h3>
+        </div>
+
+        <p className="text-[#667085] text-[15px] leading-8 mb-6">
+          Delivering advanced engineering solutions for innovation and excellence.
+          Enhancing performance through precision and expertise.
+        </p>
+
+        <div className="flex items-center gap-2 text-[#FE5800] font-medium">
+          Learn More
+          <span className="group-hover:translate-x-1 transition-transform">
+            →
+          </span>
+        </div>
+
+      </div>
+    </Link>
+
+    {/* CAE */}
+    <Link href="/cae">
+      <div className="group h-full rounded-2xl border border-[#ECECEC] bg-white p-6 lg:p-7 transition-all duration-300 hover:border-[#FE5800] hover:shadow-lg cursor-pointer">
+
+        <div className="flex items-center gap-3 mb-4">
+          <Image
+            src="/images/cae.png"
+            alt="CAE"
+            width={40}
+            height={40}
+            className="w-10 h-10"
+          />
+
+          <h3 className="text-[26px] font-semibold text-[#1F2937]">
+            CAE
+          </h3>
+        </div>
+
+        <p className="text-[#667085] text-[15px] leading-8 mb-6">
+          Delivering advanced CAE solutions for efficient product development.
+          Enhancing performance while reducing risks and costs.
+        </p>
+
+        <div className="flex items-center gap-2 text-[#FE5800] font-medium">
+          Learn More
+          <span className="group-hover:translate-x-1 transition-transform">
+            →
+          </span>
+        </div>
+
+      </div>
+    </Link>
+
+  </div>
+
+</section>
       {/* About Us Section */}
 <section className="relative pt-12 pb-6 sm:py-16 md:py-24 px-5 sm:px-8 md:px-10 lg:px-16 xl:px-24 bg-[#F5F5F5] overflow-hidden w-full">
 
@@ -177,7 +337,7 @@ export default function Home() {
       alt="Dot Pattern"
       width={180}
       height={180}
-    />
+    />n
   </div>
 
   <div className="grid md:grid-cols-2 gap-16 items-center relative z-10">
@@ -441,6 +601,7 @@ export default function Home() {
     </SwiperSlide>
 
   </Swiper>
+  
 
   
 </section>
@@ -516,7 +677,7 @@ export default function Home() {
 </Link>
   </div>
 </section>
-
+  <AutodeskSection />
 <Footer />
 
 
